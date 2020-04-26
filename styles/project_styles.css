@@ -1,0 +1,125 @@
+h1 {
+	font-family: 'ITC Benguiat W01';
+	font-size: 80px;
+	margin: 0;
+	color: #15021c;
+	text-shadow: -0.05rem -0.05rem 1px purple,
+    0.05rem -0.05rem 1px purple,
+    -0.05rem 0.05rem 1px purple,
+    0.05rem 0.05rem 1px purple,
+    0 0 15px purple,
+    0 0 20px purple;
+}
+body{
+    	background-color: #FFFFFF;
+		background-image:url('../images/2.jpg');
+		background-repeat: no-repeat;
+  		background-attachment: fixed;
+  		background-size: cover;
+    	color: black;
+    	font-family: Futura, "Brandon Grotesque", sans-serif;
+    	margin:10px;
+}
+#main {
+	background-color: black;
+	width: 80%;
+	height:1000px;
+	text-align: center;
+	justify-content: center;
+	margin: 0 auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.menubutton{
+	  color:white;
+	  background-color: purple;border: none;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: block;
+	  font-size: 16px;
+	  width:220px;
+	  margin-top: 20px;
+}
+#menu, #btnmenu, #diffmenu{
+	margin-left:43%;
+
+}
+#name {
+	width:210px;
+	height:50px;
+	font-size:20px;
+	margin-top:20px;
+
+}
+
+canvas{
+		   display: none;
+		   margin: 0 auto;
+	   }
+.show {
+	display:block;
+}
+.hide{
+	display:none;
+}
+
+#gameCanvas {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  position:block;
+}
+
+#score {
+  color:white;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Antic Slab', serif;
+}
+
+.switch-field {
+	display: flex;
+	margin-bottom: 36px;
+	overflow: hidden;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 18px 16px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	background-color: #a5dc86;
+	box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
