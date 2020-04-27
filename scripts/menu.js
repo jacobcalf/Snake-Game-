@@ -22,6 +22,7 @@ function returnfunc(){
     document.getElementById('btnmenu').className = "hide";
     document.getElementById('diffmenu').className = "hide";
     document.getElementById('score').className = "hide";
+    document.getElementById('contain').className = "hide";
 
 
 }
@@ -32,7 +33,7 @@ function leaderboardfunc(){
     document.getElementById('btnleaderboard').className = "hide";
     document.getElementById('btndiff').className = "hide";
     document.getElementById('btnmenu').className = "menubutton";
-    
+    document.getElementById('contain').className = "show";
 }
 
 function diffmenufunc(){

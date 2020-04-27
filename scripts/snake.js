@@ -2,8 +2,8 @@
 var GAME_SPEED = 100;
 const CANVAS_BORDER_COLOUR = 'black';
 const CANVAS_BACKGROUND_COLOUR = "white";
-const SNAKE_COLOUR = 'purple';
-const SNAKE_BORDER_COLOUR = 'darkpurple';
+const SNAKE_COLOUR = '#000033';
+const SNAKE_BORDER_COLOUR = 'black';
 const FOOD_COLOUR = 'red';
 const FOOD_BORDER_COLOUR = 'darkred';
 
@@ -41,6 +41,8 @@ let dx = 10;
 // Vertical velocity
 let dy = 0;
 
+let  name = null;
+
 // Get the canvas element
 const gameCanvas = document.getElementById("gameCanvas");
 // Return a two dimensional drawing context
@@ -63,7 +65,7 @@ function restart(){
     clearCanvas();
     createFood();
     score = 0;
-    var name = document.getElementById("name").value;
+    name = document.getElementById("name").value;
     document.getElementById('score').innerHTML = name+": "+score;
     snake = [
       {x: 150, y: 150},
@@ -79,11 +81,14 @@ function restart(){
 function main() {
   // If the game ended return early to stop game
   if (didGameEnd()){
+    console.log(name);
+    console.log(score);
+    send(name, score);
       if (confirm("You died! Want to Play Again? ")) {
           restart();
       } else {
           returnfunc();
- }
+      }
       return;
   }
 
@@ -268,4 +273,39 @@ function changeDirection(event) {
     dx = 0;
     dy = 10;
   }
+}
+
+function send(user, score){
+  // Use action.php
+  if (user.length == 0) {
+  }
+  else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          retrieve();
+        }
+    };
+    args = "action.php?userscore=" + score+ "&username=" + user;
+    xmlhttp.open("GET", args, true);
+    xmlhttp.send();
+  }
+}
+
+document.getElementById("replace").onload = function(){
+  retrieve();
+}
+
+function retrieve(){
+  // Use load.php
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("replace").innerHTML = this.responseText;
+      }
+  };
+  args = "load.php";
+  xmlhttp.open("GET", args, true);
+  xmlhttp.send();
 }
