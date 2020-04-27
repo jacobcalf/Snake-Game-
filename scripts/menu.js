@@ -12,6 +12,7 @@ function startfunc(){
 }
 
 function returnfunc(){
+    menu_back.play();
     document.getElementById('gameCanvas').className = "hide";
     document.getElementById('name').className = "show";
     document.getElementById('btnstart').className = "menubutton";
@@ -25,10 +26,8 @@ function returnfunc(){
 }
 
 function diffmenufunc(){
-
-document.getElementById('diffmenu').className = "switch-field";
-
-
+    menu_select.play();
+    document.getElementById('diffmenu').className = "switch-field";
     document.getElementById('name').className = "hide";
     document.getElementById('btnstart').className = "hide";
     document.getElementById('btnleaderboard').className = "hide";
@@ -36,20 +35,24 @@ document.getElementById('diffmenu').className = "switch-field";
     document.getElementById('btnmenu').className = "menubutton";
 }
 
-var diff = 100;
 
 function diffunc(){
     var ele = document.getElementsByName('difswitch');
 
     if (ele[0].checked){
+        //easy
         GAME_SPEED = 100;
     }
     else if (ele[1].checked){
+        //medium
         GAME_SPEED = 50;
     }
     else if (ele[2].checked){
+        //hard
         GAME_SPEED = 25;
     }
+}
 
-
+document.getElementsById('easybtn').onclick = function() {
+    menu_back.play();
 }

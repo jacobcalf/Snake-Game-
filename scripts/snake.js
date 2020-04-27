@@ -7,6 +7,19 @@ const SNAKE_BORDER_COLOUR = 'darkpurple';
 const FOOD_COLOUR = 'red';
 const FOOD_BORDER_COLOUR = 'darkred';
 
+let menu_select = new Audio();
+let menu_back = new Audio();
+let eat = new Audio();
+let game = new Audio();
+
+
+menu_select.src = "audio/menu select.mp3";
+menu_back.src = "audio/menu sound.mp3";
+eat.src = "audio/object_get.mp3";
+game.src = "audio/Snake Game.mp3";
+
+
+
 let snake = [
   {x: 150, y: 150},
   {x: 140, y: 150},
@@ -46,6 +59,7 @@ document.addEventListener("keydown", changeDirection);
  * called repeatedly to advance the game
  */
 function restart(){
+    game.play();
     clearCanvas();
     createFood();
     score = 0;
