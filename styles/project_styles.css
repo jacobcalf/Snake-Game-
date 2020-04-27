@@ -28,6 +28,8 @@ body{
 	justify-content: center;
 	margin: 0 auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position:relative;
+
 
 }
 .menubutton{
@@ -41,10 +43,21 @@ body{
 	  width:220px;
 	  margin-top: 20px;
 }
-#menu, #btnmenu, #diffmenu{
-	margin-left:43%;
+#menu{
+	position:block;
+	margin-left:50%;
+	margin-top:15%;
+	transform: translate(-20%, -50%); */
 
 }
+
+#btnmenu{
+	width:230px;
+	position:relative;
+	transform: translate(-5%, -50%); */
+
+}
+
 #name {
 	width:210px;
 	height:50px;
@@ -54,8 +67,8 @@ body{
 }
 
 canvas{
-		   display: none;
-		   margin: 0 auto;
+	display: none;
+	margin: 0 auto;
 	   }
 .show {
 	display:block;
@@ -65,10 +78,7 @@ canvas{
 }
 
 #gameCanvas {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+
   position:block;
 }
 
@@ -81,7 +91,8 @@ canvas{
 
 .switch-field {
 	display: flex;
-	margin-bottom: 36px;
+	margin-bottom: 50px;
+	margin-left:-12px;
 	overflow: hidden;
 }
 

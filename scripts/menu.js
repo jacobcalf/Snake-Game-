@@ -12,6 +12,7 @@ function startfunc(){
 }
 
 function returnfunc(){
+    GAME_SPEED = 999999;//freeze the snake
     menu_back.play();
     document.getElementById('gameCanvas').className = "hide";
     document.getElementById('name').className = "show";
@@ -25,6 +26,15 @@ function returnfunc(){
 
 }
 
+function leaderboardfunc(){
+    document.getElementById('name').className = "hide";
+    document.getElementById('btnstart').className = "hide";
+    document.getElementById('btnleaderboard').className = "hide";
+    document.getElementById('btndiff').className = "hide";
+    document.getElementById('btnmenu').className = "menubutton";
+    
+}
+
 function diffmenufunc(){
     menu_select.play();
     document.getElementById('diffmenu').className = "switch-field";
@@ -34,6 +44,8 @@ function diffmenufunc(){
     document.getElementById('btndiff').className = "hide";
     document.getElementById('btnmenu').className = "menubutton";
 }
+
+
 
 
 function diffunc(){
@@ -51,8 +63,4 @@ function diffunc(){
         //hard
         GAME_SPEED = 25;
     }
-}
-
-document.getElementsById('easybtn').onclick = function() {
-    menu_back.play();
 }

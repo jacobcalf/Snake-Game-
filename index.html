@@ -13,21 +13,22 @@
 
             <div id = "menu">
             <input type="text" id = "name" name ="name"value = "Name"class = "show">
-            <button id = "btnstart" type = "button" class ="menubutton" onclick="startfunc()">START</button>
-            <button id = "btnleaderboard" type = "button" class ="menubutton">LEADERBOARD</button>
+            <button id = "btnleaderboard" type = "button" class ="menubutton"onclick="leaderboardfunc()">LEADERBOARD</button>
             <button id = "btndiff" type = "button" class ="menubutton"onclick="diffmenufunc()">DIFFICULTY</button>
+            <button id = "btnstart" type = "button" class ="menubutton" onclick="startfunc()">START</button>
 
-            </div>
-                <div id = diffmenu class="hide">
+            <div id = diffmenu class="hide">
             		<input type="radio" id="easybtn" name="difswitch" value="easy" onclick="menu_back.play()" checked/>
             		<label for="easybtn">EASY</label>
             		<input type="radio" id="medbtn" name="difswitch" value="medium" onclick="menu_back.play()" />
             		<label for="medbtn">MEDIUM</label>
             		<input type="radio" id="hardbtn" name="difswitch" value="hard" onclick="menu_back.play()"/>
             		<label for="hardbtn">HARD</label>
-
             </div>
+
             <button id = "btnmenu"type = "button"class = "hide" onclick="returnfunc()">Menu</button>
+        </div>
+
             <div class = "hide" id="score">0</div>
 
             <canvas id="gameCanvas" width="500" height="500" class = "hide"></canvas>
